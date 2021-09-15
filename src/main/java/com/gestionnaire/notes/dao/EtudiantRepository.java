@@ -17,10 +17,10 @@ public interface EtudiantRepository
         public Page<Etudiant> findByNom(String n, Pageable pageable);
 
         @Query("select e from Etudiant e where e.nom like :x")
-        public Page<Etudiant> chercherEtudiantsNom(@Param("x") String mc, Pageable pageable);
+        public Page<Etudiant> chercherEtudiants(@Param("x") String mc, Pageable pageable);
 
         @Query("select e from Etudiant e where e.dateNaissance > :x and e.dateNaissance < :y")
-        public List<Etudiant> chercherEtudiantsDate(@Param("x") Date d1, @Param("y") Date d2);
+        public List<Etudiant> chercherEtudiants(@Param("x") Date d1, @Param("y") Date d2);
 
 
 }

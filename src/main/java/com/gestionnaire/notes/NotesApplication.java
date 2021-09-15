@@ -32,7 +32,7 @@ public class NotesApplication {
 				new Etudiant("Ibrahim", "Med", df.parse("1988-11-10"),
 						"ibrahim@gmail.com"));
 
-		Page<Etudiant> etds = etudiantRepository.chercherEtudiantsNom("%d%", PageRequest.of(0, 3));
+		Page<Etudiant> etds = etudiantRepository.chercherEtudiants("%d%", PageRequest.of(0, 3));
 		etds.forEach(e-> System.out.println(e.getNom()));
 	}
 
