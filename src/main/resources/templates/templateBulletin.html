@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+          crossorigin="anonymous">
+    <style>
+        .row {
+            margin-left:-5px;
+            margin-right:-5px;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            background-color: lightgray;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr {
+            border: 1px solid #ddd
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Bulletin de notes</h2>
+
+<div class="container">
+
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <th>Elève : Fehmir SMAILI</th>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <table>
+                <tr>
+                    <th>Collège : </th>
+                </tr>
+                <tr>
+                    <td>Bulletin de notes: 3éme Trimestre</td>
+                </tr>
+                <tr>
+                    <td>Année scolaire : 2021 / 2022</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div >
+        <table  class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Matieres</th>
+                <th>Elève</th>
+                <th>Classe</th>
+                <th>Commentaires</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Moyenne</td>
+                <td>Moyenne</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>15</td>
+                <td>14</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Français</td>
+                <td>18</td>
+                <td>16</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Histoire et Geographie</td>
+                <td>12</td>
+                <td>17</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Mathematiques</td>
+                <td>13</td>
+                <td>17</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>SVT</td>
+                <td>18</td>
+                <td>16</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Technologie</td>
+                <td>10</td>
+                <td>14</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Arts Plastiques</td>
+                <td>19</td>
+                <td>16</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Education Musicale</td>
+                <td>18</td>
+                <td>14</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Education phisique et sportive</td>
+                <td>18</td>
+                <td>16</td>
+                <td>comment xxxx</td>
+            </tr>
+            <tr>
+                <td>Vie Scolaire</td>
+                <td>18</td>
+                <td>11</td>
+                <td>comment xxxx</td>
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
