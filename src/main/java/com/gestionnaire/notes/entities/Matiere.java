@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class Matiere implements Serializable {
     @Id
     @GeneratedValue
-    @Column(name = "IDMatiere")
+
     private Long id;
     private String nomMatiere;
 

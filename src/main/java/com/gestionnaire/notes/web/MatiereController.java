@@ -16,6 +16,7 @@ public class MatiereController {
     @Autowired
     private MatiereRepository matiereRepository;
 
+    @RequestMapping(value = "/Index")
     public String Index(Model model){
         List<Matiere> matiereList=matiereRepository.findAll();
         model.addAttribute("templateBulletin", matiereList);
