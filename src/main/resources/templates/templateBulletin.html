@@ -54,10 +54,16 @@
         <div class="column">
             <table>
                 <tr>
-                    <th>Collège : </th>
+                    <th>Collège : Jean Macé</th>
                 </tr>
                 <tr>
-                    <td>Bulletin de notes: 3éme Trimestre</td>
+                    <td>Bulletin de notes: <b>1ére Trimestre</b></td>
+                </tr>
+                <tr>
+                    <td>Elève: <b>Moyenne Generale [ 12 ]</b></td>
+                </tr>
+                <tr>
+                    <td>Classe: <b>Moyenne Generale [ 14 ]</b></td>
                 </tr>
                 <tr>
                     <td>Année scolaire : 2021 / 2022</td>
@@ -71,24 +77,30 @@
         <table  class="table">
             <thead class="thead-dark">
             <tr>
+                <!--<th>ID</th>-->
                 <th>Matieres</th>
                 <th>Elève</th>
                 <th>Classe</th>
+               <!-- <th></th>-->
                 <th>Commentaires</th>
             </tr>
             <tr>
+                <!--<td></td>-->
                 <td></td>
-                <td>Moyenne</td>
-                <td>Moyenne</td>
+                <td>Note moyenne</td>
+                <td>Note moyenne</td>
+               <!-- <td>Note moyenne</td>-->
                 <td></td>
             </tr>
-            <tr>
-                <td>Anglais</td>
-                <td>15</td>
+            <tr th:each="m:${templateBulletin}">
+               <!-- <td th:text="${m.idMatiere}"></td>-->
+                <td th:text="${m.nomMatiere}"></td>
+                <td th:text="${m.noteMatiere}"></td>
                 <td>14</td>
+               <!-- <td>12</td>-->
                 <td>comment xxxx</td>
             </tr>
-            <tr>
+           <!-- <tr>
                 <td>Français</td>
                 <td>18</td>
                 <td>16</td>
@@ -141,7 +153,7 @@
                 <td>18</td>
                 <td>11</td>
                 <td>comment xxxx</td>
-            </tr>
+            </tr>-->
             </thead>
 
         </table>

@@ -10,24 +10,26 @@ import java.io.Serializable;
 public class Matiere implements Serializable {
     @Id
     @GeneratedValue
-
-    private Long id;
+    private Long idMatiere;
     private String nomMatiere;
+    private int noteMatiere;
+
 
     public Matiere() {
     }
 
-    public Matiere( String nomMatiere) {
+    public Matiere( String nomMatiere, int noteMatiere) {
 
         this.nomMatiere = nomMatiere;
-
-    }
-    public Long getId() {
-        return id;
+        this.noteMatiere = noteMatiere;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getIdMatiere() {
+        return idMatiere;
+    }
+
+    public void setIdMatiere(Long idMatiere) {
+        this.idMatiere = idMatiere;
     }
 
     public String getNomMatiere() {
@@ -38,6 +40,20 @@ public class Matiere implements Serializable {
         this.nomMatiere = nomMatiere;
     }
 
+    public int getNoteMatiere() {
+        return noteMatiere;
+    }
 
+    public void setNoteMatiere(int noteMatiere) {
+        this.noteMatiere = noteMatiere;
+    }
+
+    @Override
+    public String toString() {
+        return "Matiere: " +
+                "ID = " + idMatiere +
+                ", NOM = '" + nomMatiere + '\'' +
+                ", NOTE = " + noteMatiere;
+    }
 }
 

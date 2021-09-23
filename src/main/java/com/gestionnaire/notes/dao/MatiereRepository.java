@@ -17,6 +17,6 @@ public interface MatiereRepository extends JpaRepository<Matiere, Long> {
     @Query("select m from Matiere m where m.nomMatiere like :x")
     public Page<Matiere> chercherMatieres(@Param("x") String mc, Pageable pageable);
 
-    @Query("select m from Matiere m where m.id > :x and m.id < :y")
+    @Query("select m from Matiere m where m.idMatiere > :x and m.idMatiere < :y")
     public List<Matiere> chercherMatieres(@Param("x") Long xLong, @Param("y") Long yLong);
 }
