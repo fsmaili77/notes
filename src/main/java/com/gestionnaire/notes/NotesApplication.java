@@ -20,20 +20,20 @@ public class NotesApplication  {
 
 	public static void main(String[] args) throws ParseException {
 		ApplicationContext ctx = SpringApplication.run(NotesApplication.class, args);
-		/*EtudiantRepository etudiantRepository =
+		EtudiantRepository etudiantRepository =
 				ctx.getBean(EtudiantRepository.class);
 		MatiereRepository matiereRepository = ctx.getBean(MatiereRepository.class);
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 
 		etudiantRepository.save(
-				new Etudiant("Ahmed", "Med", df.parse("1988-11-10"),
-						"ahmed@gmail.com"));
+				new Etudiant("Mbappé", "Kylian", df.parse("1988-11-10"),
+						"kylian@gmail.com"));
 		etudiantRepository.save(
-				new Etudiant("Muhamed", "Med", df.parse("1988-11-10"),
-						"med@gmail.com"));
+				new Etudiant("Griezman", "Antoine", df.parse("1988-11-10"),
+						"antoine@gmail.com"));
 		etudiantRepository.save(
-				new Etudiant("Ibrahim", "Med", df.parse("1988-11-10"),
-						"ibrahim@gmail.com"));
+				new Etudiant("Benzema", "Karim", df.parse("1988-11-10"),
+						"karim@gmail.com"));
 
 		Page<Etudiant> etds = etudiantRepository.chercherEtudiants("%d%", PageRequest.of(0, 3));
 		etds.forEach(e-> System.out.println(e.getNom()));
@@ -43,9 +43,9 @@ public class NotesApplication  {
 		matiereRepository.save( new Matiere("Mathematiques", 19));
 		matiereRepository.save( new Matiere("Francais", 14));
 		Page<Matiere> matiereList = matiereRepository.chercherMatieres("%a%", PageRequest.of(0, 5));
-		matiereList.forEach(m-> System.out.println(m.getNomMatiere()));*/
+		matiereList.forEach(m-> System.out.println(m.getNomMatiere()));
 
-		Matiere matiere1 = new Matiere();
+		/*Matiere matiere1 = new Matiere();
 		matiere1.setIdMatiere(1L);
 		matiere1.getIdMatiere();
 		matiere1.setNomMatiere("Français");
@@ -74,12 +74,7 @@ public class NotesApplication  {
             e1[i] = new Marks();
             e1[i].getDetails();
             e1[i].printAverage();
-        }
-        /*System.out.println("Roll number details");
-        for(int i=0; i<2; i++){
-            e1[i].printRollNum();
         }*/
-
 
 	}
 
