@@ -1,30 +1,60 @@
 package com.gestionnaire.notes.entities;
 
 public class Notes {
-    int noteMatiere;
-    float noteMoyenne;
+
+    int noteEcrit;
+    int noteOral;
+    double noteMoyenne = (noteEcrit+noteOral)/2;
+
 
     public Notes() {
     }
 
-    public Notes(int noteMatiere, float noteMoyenne) {
-        this.noteMatiere = noteMatiere;
+    public Notes(int noteEcrit, int noteOral, double noteMoyenne) {
+        this.noteEcrit = noteEcrit;
+        this.noteOral = noteOral;
         this.noteMoyenne = noteMoyenne;
     }
 
-    public int getNoteMatiere() {
-        return noteMatiere;
+    public int getNoteEcrit() {
+        return noteEcrit;
     }
 
-    public void setNoteMatiere(int noteMatiere) {
-        this.noteMatiere = noteMatiere;
+    public void setNoteEcrit(int noteEcrit) {
+        this.noteEcrit = noteEcrit;
     }
 
-    public float getNoteMoyenne() {
+    public int getNoteOral() {
+        return noteOral;
+    }
+
+    public void setNoteOral(int noteOral) {
+        this.noteOral = noteOral;
+    }
+
+    public double getNoteMoyenne() {
         return noteMoyenne;
     }
 
-    public void setNoteMoyenne(float noteMoyenne) {
+    public void setNoteMoyenne(double noteMoyenne) {
         this.noteMoyenne = noteMoyenne;
     }
+
+    @Override
+    public String toString() {
+        return "Notes{" +
+            "noteEcrit=" + noteEcrit +
+            ", noteOral=" + noteOral +
+            ", noteMoyenne=" + noteMoyenne +
+            '}';
+    }
+    public void afficherResultatNotes() {
+        System.out.println(this.toString());
+    }
+    public double afficherMoyenneMatiere(){
+        return ((double) noteEcrit + noteOral)/2;
+    }
+
+
+
 }

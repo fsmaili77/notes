@@ -12,13 +12,13 @@ public class Matiere implements Serializable {
     @GeneratedValue
     private Long idMatiere;
     private String nomMatiere;
-    private int noteMatiere;
+    private double noteMatiere;
 
 
     public Matiere() {
     }
 
-    public Matiere( String nomMatiere, int noteMatiere) {
+    public Matiere( String nomMatiere, double noteMatiere) {
 
         this.nomMatiere = nomMatiere;
         this.noteMatiere = noteMatiere;
@@ -40,20 +40,21 @@ public class Matiere implements Serializable {
         this.nomMatiere = nomMatiere;
     }
 
-    public int getNoteMatiere() {
+    public double getNoteMatiere() {
         return noteMatiere;
     }
 
-    public void setNoteMatiere(int noteMatiere) {
+    public void setNoteMatiere(double noteMatiere) {
         this.noteMatiere = noteMatiere;
     }
 
     @Override
     public String toString() {
-        return "Matiere: " +
-                "ID = " + idMatiere +
-                ", NOM = '" + nomMatiere + '\'' +
-                ", NOTE = " + noteMatiere;
+        return nomMatiere;
     }
+    public void afficherMatieres() {
+        System.out.println(this.toString());
+    }
+
 }
 
